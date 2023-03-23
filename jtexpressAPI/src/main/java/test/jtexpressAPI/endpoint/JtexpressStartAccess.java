@@ -10,6 +10,8 @@ import test.jtexpressAPI.httpcommunication.JtexpressRequest;
 import test.jtexpressAPI.model.Logistic_interfaceFormatcontent;
 
 import java.awt.*;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.security.Signature;
 
 @RestController
@@ -24,8 +26,8 @@ public class JtexpressStartAccess {
 
 
     @GetMapping(path="/testaccess")
-    public String index(){
-        return "Test ok : "+jtexpressConfig.getJtKey();
+    public String index() throws UnsupportedEncodingException, NoSuchAlgorithmException {
+        return "Data digest is : "+jtexpressConfig.init();
     }
 
     @PostMapping(path="/getAdress")

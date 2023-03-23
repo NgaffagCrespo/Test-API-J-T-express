@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Logistic_interfaceFormatcontent {
 
-    String customerid;
+
     String weight;
     String destAreaCode;
     String sendSiteCode;
